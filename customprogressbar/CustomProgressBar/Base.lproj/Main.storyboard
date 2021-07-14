@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomProgressBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PAw-Zd-1fJ">
+                                <rect key="frame" x="112.5" y="93.5" width="150" height="480"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8F-Wh-pge" customClass="ProgressBar" customModule="CustomProgressBar" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="480"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startGradientColor">
+                                                <color key="value" red="0.018209595233201981" green="0.46317040920257568" blue="0.89523929357528687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endGradientColor">
+                                                <color key="value" red="0.0024397033266723156" green="0.86616277694702148" blue="0.36374276876449585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="480" id="GTC-dz-a2f"/>
+                                    <constraint firstAttribute="width" constant="150" id="l3X-Sq-eOi"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54M-m4-oCV">
+                                <rect key="frame" x="31" y="488" width="43" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="Lzs-oV-2CG"/>
+                                    <constraint firstAttribute="height" constant="44" id="T3T-4d-0OT"/>
+                                </constraints>
+                                <state key="normal" image="negative"/>
+                                <connections>
+                                    <action selector="reduceClicked:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="VWH-Ic-D2A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLZ-WT-RtJ">
+                                <rect key="frame" x="297" y="488" width="43" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NtZ-56-8JD"/>
+                                    <constraint firstAttribute="width" constant="43" id="PeJ-fq-RmB"/>
+                                </constraints>
+                                <state key="normal" image="Plus"/>
+                                <connections>
+                                    <action selector="AddClicked:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Cgo-yr-64e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QLZ-WT-RtJ" firstAttribute="leading" secondItem="PAw-Zd-1fJ" secondAttribute="trailing" constant="34.5" id="4ff-WT-AN9"/>
+                            <constraint firstItem="54M-m4-oCV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="488" id="5D8-uI-1Vy"/>
+                            <constraint firstItem="PAw-Zd-1fJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CNm-H9-AZc"/>
+                            <constraint firstItem="PAw-Zd-1fJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Cmj-Pp-hTN"/>
+                            <constraint firstItem="QLZ-WT-RtJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="488" id="H9c-CL-hBf"/>
+                            <constraint firstItem="PAw-Zd-1fJ" firstAttribute="leading" secondItem="54M-m4-oCV" secondAttribute="trailing" constant="38.5" id="HYH-SN-8ku"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QLZ-WT-RtJ" secondAttribute="bottom" constant="135" id="SMT-ZM-qs9"/>
+                            <constraint firstItem="54M-m4-oCV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="UXQ-Tb-tMb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="54M-m4-oCV" secondAttribute="bottom" constant="135" id="XxI-61-tLX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QLZ-WT-RtJ" secondAttribute="trailing" constant="35" id="ixW-nA-Gje"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressBar1" destination="c8F-Wh-pge" id="OuX-4s-7Dk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Plus" width="256" height="256"/>
+        <image name="negative" width="600" height="600"/>
+    </resources>
+</document>
